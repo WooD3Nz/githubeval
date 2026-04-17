@@ -14,3 +14,4 @@ RUN apt-get update && apt-get install -y \
 EXPOSE 80 22
 
 RUN echo 'root:password' | chpasswd
+CMD ["nginx", "-g", "daemon off;"]
