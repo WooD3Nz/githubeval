@@ -8,7 +8,7 @@ pipeline {
         }
         stage('checkout SCM') {
             steps {
-                 sh "git clone https://github.com/WooD3Nz/SRCops.git"
+                 sh "git clone https://github.com/WooD3Nz/githubeval.git"
             }
         }
         stage('docker build image nginx') {
