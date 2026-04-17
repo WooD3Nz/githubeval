@@ -48,7 +48,7 @@ pipeline {
         stage('docker create nginx container') {
             steps {
                 sh '''
-                    docker run -d --name myapp --hostname myapp -v volumemyapp:/var/www/html --ip 192.168.10.100 my-nginx:latest
+                    docker run -d --name myapp --hostname myapp -v volumemyapp:/var/www/html my-nginx:latest
                     docker ps
                     docker exec myapp /etc/init.d/nginx start
                 '''
